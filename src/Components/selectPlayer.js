@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 
 import Players from './Player';
 
-import img1 from '../assets/blue-pawn.png'
-import img2 from '../assets/yellow-pawn.png'
 
 
 class PlayerSelect extends React.Component {
@@ -12,7 +10,7 @@ class PlayerSelect extends React.Component {
     super(props)
     
     this.state = {
-    pawns: ['yellow', 'red'],
+    pawns: ['blue', 'black', 'green', 'red'],
     currentPlayerSelect: 1,
     players: [],
     readyToStart: false
@@ -59,14 +57,16 @@ class PlayerSelect extends React.Component {
             {
               this.state.pawns.map(pawn => (
                 <div className="pawn-container" key={pawn} onClick={() => this.setPlayer(pawn)}>
-                  <img
+                    <img
                     className="pawn"
                     alt={pawn}
-                    src={img1} />
+                    src={`./pawn/${pawn}-pawn.png`} />
                   <img
                     className="pawn-logo"
                     alt={pawn}
-                    src={img2} />
+                    src={`./images/${pawn}.png`} 
+                    />
+                    
                 </div>
               ))
             }

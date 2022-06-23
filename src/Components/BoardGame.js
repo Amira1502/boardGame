@@ -106,7 +106,7 @@ class BoardGame extends Component {
               {
                 square.type !== 'start' ?
                 <img alt={square.type} src={`./images/${square.type}.png`} /> :
-                'Rest due to JavaScript Fatigue'
+                'Start'
               }
             </div>
           ))
@@ -126,7 +126,7 @@ class BoardGame extends Component {
                 <img
                   alt={player.number}
                   className="pawn"
-                  src={`./pawns/${player.pawn}-pawn.png`} />
+                  src={`./pawn/${player.pawn}-pawn.png`} />
               </div>
             )
           })

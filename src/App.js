@@ -59,8 +59,10 @@ class App extends Component {
 
   render() {
     return (
+
       <div className="App">
-        <h1> Board game simulation “Alexandria” </h1>
+         <h1> Board game simulation “Alexandria” </h1>
+
         <Players players={this.state.players} />
         {
           this.state.gameStarted ?
